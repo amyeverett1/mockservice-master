@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Mars visa - details
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+        <h2 class="heading-large">
+          Provide financial evidence
+        </h2>
+
+        <p>To be able to apply for a Mars visa you will need to provide evidence that you can afford the cost of a visa.</p>
+
+        <h3 class="heading-medium">Upload evidence</h3>
+        <p>Uploads can be in these formats:</p>
+        <ul class="list list-bullet">
+          <li>jpeg</li>
+          <li>AI</li>
+          <li>PDF</li>
+        </ul>
+
+          <form>
+            <div class="form-group">
+              <fieldset>
+
+                <div class="form-group">
+                  <input type="file" id="imageLoader" name="imageLoader" value="Choose file" />
+                </div>
+
+              </fieldset>
+
+              </form>
+
+        <a class="button" href="mars-medical.html" role="button">Next</a>
+
+        <br><br>
+
+        <canvas id="upload"></canvas>
+            
+
+    </div>
+  </div>
+
+</main>
+
+<script type="text/javascript" src="http://fiddle.jshell.net/js/lib/mootools-core-1.4.5-nocompat.js"></script>
+<script type="text/javascript">
+  window.addEvent('load', function() {
+  var imageLoader = document.getElementById('imageLoader');
+      imageLoader.addEventListener('change', handleImage, false);
+  var c = document.getElementById('upload');
+  var ctx = c.getContext('2d');
+
+  function handleImage(e){
+      var reader = new FileReader();
+      reader.onload = function(event){
+          var img = new Image();
+          img.onload = function(){
+              c.width = img.width;
+              c.height = img.height;
+              ctx.drawImage(img,0,0);
+          }
+          img.src = event.target.result;
+      }
+      reader.readAsDataURL(e.target.files[0]);     
+  }
+
+  });
+
+</script>
+
+
+
+
+{% endblock %}

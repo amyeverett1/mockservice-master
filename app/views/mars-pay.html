@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+    <h1 class="heading-small">You owe us</h1>
+    <h2 class="heading-xlarge" style="margin-top: 0;">£103,349.00<br>(54.42 BTC)</h2>
+
+    <h2 class="heading-small" >Scan the QR code and pay by bitcoin</h2>
+    <img src="{{ asset_path }}/images/bitcoin.png" width="100px"><br>
+    <img src="{{ asset_path }}/images/qr.jpg" width="200px">
+
+    <div class="form-group" style="margin-top:20px;">
+      <a href="standard-submitted" class="button">Complete</a>
+    </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

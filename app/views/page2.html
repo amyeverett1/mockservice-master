@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="#" class="link-back" onClick="history.go(-1);">Back</a>
+
+      <form action="" method="get" class="form">
+        
+      <h2 class="heading-large">
+        What is your date of birth?
+      </h2>
+
+        <fieldset class="form-group">
+          <legend class="visuallyhidden">Date of birth</legend>
+          <div class="form-date">
+
+            <p class="form-hint">For example, 31 3 1980</p>
+
+            <div class="form-group form-group-day">
+              <label for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" value ="{{ data['dob-day'] }}" autocomplete="off">
+            </div>
+
+            <div class="form-group form-group-month">
+              <label for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value ="{{ data['dob-month'] }}">
+            </div>
+
+            <div class="form-group form-group-year">
+              <label for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014" value ="{{ data['dob-year'] }}">
+            </div>
+
+          </div>
+        </fieldset>
+
+        <h1 class="heading-large">
+          How should we contact you?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Contact method</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="phone">
+              <label for="radio-1">Phone</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="text">
+              <label for="radio-2">Text message</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="e-mail">
+              <label for="radio-3">E-mail</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="post">
+              <label for="radio-3">Post</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="none">
+              <label for="radio-3">I do not wish to be contacted</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div style="float: right;">
+      <div class="form-group">
+        <input class="button" type="submit" value="Continue" style="float: right;">
+      </div>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

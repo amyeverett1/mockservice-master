@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Bookings - GOV.UK
+{% endblock %}
+
+{% block inside_header %}
+
+  <div class="header-proposition" style="float:right;padding-top:3px;">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+        <ul id="proposition-links">
+          <li style="color: white;">Jo Bloggs</li>
+
+            <li>
+              <a href="sign-out">Sign out</a>
+            </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  .booking-list-link {
+    font-weight:normal;
+  }
+
+  .status:before {
+    border:none;
+  }
+
+  .status.pending:before {
+    border:none;
+  }
+
+  .status.cancelled:before {
+    border:none;
+  }
+
+  .status.draft:before {
+    width:19px;
+    height:19px;
+  }
+
+</style>
+
+<main id="content" role="main">
+
+<!--<div class="panel panel-border-wide alert-success" style="border-color: #28A197;background-color: #eaf6f5; margin-bottom:0px; margin-top:30px;margin-left:0px;margin-right:0px;">
+    <p>Booking request for {{ firstName }} {{ lastName }} ({{ ref }}) group sent to travel agent.</p>
+  </div>-->
+
+          <div class="grid-row" style="margin-bottom:0px; margin-left:0px;margin-right:0px;">
+          </div>
+
+
+            <div class="grid-row" style="margin-bottom:0px; border-bottom: 5px solid #005ea5; margin-left:0px;margin-right:0px; margin-top:15px;">
+
+          <div class="grid-row" style="margin-bottom:0px;  margin-left:0px;margin-right:0px;border-bottom: 5px solid #005ea5;">
+      <div class="column-two-thirds" style="margin-left:0px;padding-left:0px;">
+          <h1 class="heading-xlarge" style="margin-top:30px; margin-left:0px; margin-bottom:0px;">Menu</h3>
+        </div>
+        <div class="column-one-third" style="margin-right:0px;padding-right:0px;">
+        <form action="new-booking/single-or-group" method="get" style="float:right;margin-top: 30px; padding-right: 0px; ">
+          <input class="button" type="submit" value="Create new booking"/>
+        </form>
+      </div>
+    </div>
+
+    <br />
+
+    <h1 class="heading-medium" style="margin-top:15px; margin-left:0px;">Your latest activity</h3>
+
+             <table style="">
+    <thead>
+      <th>Name</th>
+      <th>Reference</th>
+      <th>Status</th>
+      <th></th>
+    </thead>
+     <tbody>
+       <tr>
+         <td>
+           Name one
+         </td>
+         <td>
+           XXXXXXXXXX
+         </td>
+         <td>
+            <div class="status booked" style="font-size:19px;">
+              <p class="status_name">Done</p>
+            </div>
+         </td>
+         <td>
+           <a href="#">View</a>
+         </td>
+       </tr>
+       <tr>
+         <td>
+          Name two
+         </td>
+         <td>
+           XXXXXXXXXXX
+         </td>
+         <td>
+            <div class="status cancelled" style="font-size:19px;">
+              <p class="status_name">Gone</p>
+            </div>
+         </td>
+         <td>
+           <a href="flight-departed/booking">View</a>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           Name three
+         </td>
+         <td>
+           XXXXXXXXXX
+         </td>
+         <td>
+           <div class="status pending" style="font-size: 19px;">
+              <p class="status_name">In progress</p>
+            </div>
+         </td>
+         <td>
+           <a href="#">View</a>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           Name four
+         </td>
+         <td>
+           XXXXXXXXXX
+         </td>
+         <td>
+           <div class="status cancelled" style="font-size: 19px;">
+              <p class="status_name">Cancelled</p>
+            </div>
+         </td>
+         <td>
+           <a href="#">View</a>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           Name five
+         </td>
+         <td>
+           XXXXXXXXXX
+         </td>
+         <td>
+           <div class="status pending" style="font-size: 19px;">
+              <p class="status_name">In progress</p>
+            </div>
+         </td>
+         <td>
+           <a href="#">View</a>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+            <br />
+            <br />
+
+            <a href="all-your-bookings">View all items</a>
+
+     <br />
+     <br />
+              <br />
+
+          </div>
+
+            <div class="grid-row" style="margin-bottom:0px;  margin-left:0px;margin-right:0px;">
+
+          <h1 class="heading-medium">Find any items</h1>
+
+            <form action="search-results" method="get" style="clear: both;">
+
+           <h1 class="form-title" style="">
+              Search by Reference
+          </h1>
+
+   </form>
+   <form action="flight-departed/search-results">
+       <div class="form-group">
+
+            <input type="text" class="form-control" id="searchTerm" name="searchTerm" style="width: 450px;">
+            <button class="button" type="submit" value="Search" name="" style="background-color:black; padding-bottom:3px;"/>
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+   </form>
+            <br />
+            <br />
+
+          </div>
+
+          <br />
+            <br />
+
+
+    </div>
+</main>
+
+{% endblock %}

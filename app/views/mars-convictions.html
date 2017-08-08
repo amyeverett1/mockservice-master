@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Mars visa - details
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+        <h2 class="heading-large">
+          Convictions
+        </h2>
+
+        <p>Before you are granted a visa, we must check that you aren't a criminal. Please answer the following questions truthfully.</p>
+
+        <div class="form-group">
+
+          <form>
+            <div class="form-group">
+
+              <h3 class="heading-medium">Previous convictions</h3>
+
+                <fieldset>
+
+                  <legend>
+                    <span class="body-text">Do you have any convictions for the following?</span>
+                  </legend>
+
+                  <br>
+                  <div class="multiple-choice">
+                    <input id="driving" name="heart-types" type="checkbox" value="driving">
+                    <label for="driving">Driving </label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="drone" name="heart-types" type="checkbox" value="drone">
+                    <label for="drone">Flying </label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="spacedust" name="heart-types" type="checkbox" value="spacedust">
+                    <label for="spacedust">Misuse of space dust</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="Bitcoin" name="heart-types" type="checkbox" value="Bitcoin">
+                    <label for="Bitcoin">Bitcoin fraud</label>
+                  </div>
+                  <div class="multiple-choice" data-target="contact-by-text">
+                    <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                    <label for="example-contact-by-text">Other</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                    <label class="form-label" for="contact-text-message"></label>
+                    <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                  </div>
+
+                </fieldset>
+
+
+                <h3 class="heading-medium">No convictions</h3>
+                <fieldset>
+                  <div class="multiple-choice" data-target="other-3">
+                    <input id="example-no-convictions" type="checkbox" name="radio-contact-group" value="No">
+                    <label for="example-no-convictions">None of the above</label>
+                  </div>
+
+                </fieldset>
+
+                <br><br>
+
+              </form>
+
+      <a class="button" href="mars-evidence.html" role="button">Next</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

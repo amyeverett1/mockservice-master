@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Space travel - conditions
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Standard term visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/question_01" method="get" class="form">
+
+        <h2 class="heading-large">
+          Conditions
+        </h2>
+
+        <p>Before you are granted a visa, we must check that you are physically fit enough to make the journey. Please answer the following questions truthfully.</p>
+
+        <div class="form-group">
+
+          <form>
+            <div class="form-group">
+
+              <h3 class="heading-medium">Heart conditions</h3>
+
+                <fieldset>
+
+                  <legend>
+                    <span class="body-text">Do you have any of the following?</span>
+                  </legend>
+
+                  <br>
+                  <div class="multiple-choice">
+                    <input id="Congenital" name="heart-types" type="checkbox" value="Congenital">
+                    <label for="Congenital">Congenital heart disease</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="Inherited" name="heart-types" type="checkbox" value="Inherited">
+                    <label for="Inherited">Inherited heart condition</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="Angina" name="heart-types" type="checkbox" value="Angina">
+                    <label for="Angina">Angina</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="Arrhythmia" name="heart-types" type="checkbox" value="Arrhythmia">
+                    <label for="Arrhythmia">Arrhythmia</label>
+                  </div>
+                  <div class="multiple-choice" data-target="contact-by-text">
+                    <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                    <label for="example-contact-by-text">Other</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                    <label class="form-label" for="contact-text-message"></label>
+                    <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                  </div>
+
+                </fieldset>
+
+                <h3 class="heading-medium">Mental health conditions</h3>
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="body-text">Do you have any of the following?</span>
+                    </legend>
+
+                    <br>
+                    <div class="multiple-choice">
+                      <input id="Depression" name="mental-health" type="checkbox" value="Depression">
+                      <label for="Depression">Depression</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="Anxiety" name="mental-health" type="checkbox" value="Anxiety">
+                      <label for="Anxiety">Anxiety</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="Schizophrenia" name="mental-health" type="checkbox" value="Schizophrenia">
+                      <label for="Schizophrenia">Schizophrenia</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="Bipolardisorder" name="mental-health" type="checkbox" value="Bipolar disorder">
+                      <label for="Bipolardisorder">Bipolar disorder</label>
+                    </div>
+                    <div class="multiple-choice" data-target="other-1">
+                      <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                      <label for="example-contact-by-text">Other (please specify)</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="other-1">
+                      <label class="form-label" for="contact-text-message"></label>
+                      <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                    </div>
+
+                  </fieldset>
+
+
+                  <h3 class="heading-medium">Physical disabilities</h3>
+
+                    <fieldset>
+
+                      <legend>
+                        <span class="body-text">Do you have any of the following?</span>
+                      </legend>
+
+                      <br>
+
+                      <div class="multiple-choice" data-target="amputation">
+                        <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                        <label for="example-contact-by-text">Amputation (please specify limb)</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="amputation">
+                        <label class="form-label" for="contact-text-message"></label>
+                        <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="Arthritis" name="physical-types" type="checkbox" value="Arthritis">
+                        <label for="Arthritis">Arthritis</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="Cerebral" name="physical-types" type="checkbox" value="Cerebral">
+                        <label for="Cerebral">Cerebral palsy</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="multiple-sclerosis" name="physical-types" type="checkbox" value="multiple-sclerosis">
+                        <label for="multiple-sclerosis">Multiple-sclerosis</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="muscular" name="physical-types" type="checkbox" value="muscular">
+                        <label for="muscular">Muscular dystrophy</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="spinal" name="physical-types" type="checkbox" value="spinal">
+                        <label for="spinal">Acquired spinal injury (paraplegia or quadriplegia)y</label>
+                      </div>
+                      <div class="multiple-choice">
+                        <input id="polio" name="physical-types" type="checkbox" value="polio">
+                        <label for="polio">Post-polio syndrome</label>
+                      </div>
+                      <div class="multiple-choice" data-target="other-2">
+                        <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                        <label for="example-contact-by-text">Other (please specify)</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="other-2">
+                        <label class="form-label" for="contact-text-message"></label>
+                        <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                      </div>
+
+                    </fieldset>
+
+                    <h3 class="heading-medium">Visual impairments</h3>
+
+                      <fieldset>
+
+                        <legend>
+                          <span class="body-text">Do you have any of the following?</span>
+                        </legend>
+
+                        <br>
+                        <div class="multiple-choice">
+                          <input id="Albinism" name="visual-types" type="checkbox" value="Albinism">
+                          <label for="Albinism">Albinism</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="Cataracts" name="visual-types" type="checkbox" value="Cataracts">
+                          <label for="Cataracts">Cataracts</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="Retinopathy" name="visual-types" type="checkbox" value="Retinopathy">
+                          <label for="Retinopathy">Diabetic Retinopathy</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="Glaucoma" name="visual-types" type="checkbox" value="Glaucoma">
+                          <label for="Glaucoma">Glaucoma</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="Retinitis" name="visual-types" type="checkbox" value="Retinitis">
+                          <label for="Retinitis">Retinitis Pigmentosa (RP)</label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="Stargardt" name="visual-types" type="checkbox" value="Stargardt">
+                          <label for="Stargardt">Stargardt Disease</label>
+                        </div>
+
+
+                      </fieldset>
+
+                      <h3 class="heading-medium">Other</h3>
+
+                        <fieldset>
+
+                          <legend>
+                            <span class="body-text">Select all that apply</span>
+                          </legend>
+
+                          <br>
+                          <div class="multiple-choice" data-target="other-5">
+                            <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                            <label for="example-contact-by-text">Epilepsy</label>
+                          </div>
+                          <div class="panel panel-border-narrow js-hidden" id="other-5">
+                            <label class="form-label" for="contact-text-message">Please specify the level</label>
+                            <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                          </div>
+                          <div class="multiple-choice" data-target="other-4">
+                            <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                            <label for="example-contact-by-text">Strokes</label>
+                          </div>
+                          <div class="panel panel-border-narrow js-hidden" id="other-4">
+                            <label class="form-label" for="contact-text-message">Please specify the level</label>
+                            <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                          </div>
+                        </fieldset>
+
+
+                        <h3 class="heading-medium">No conditions</h3>
+                        <fieldset>
+                          <div class="multiple-choice" data-target="other-3">
+                            <input id="example-contact-by-text" type="checkbox" name="radio-contact-group" value="No">
+                            <label for="example-contact-by-text">None of the above</label>
+                          </div>
+
+                        </fieldset>
+
+                        <br><br>
+
+                      </form>
+
+                      <div class="notice">
+                          <i class="icon icon-important">
+                            <span class="visually-hidden">Warning</span>
+                          </i>
+                          <strong class="bold-small">
+                            <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+                          </strong>
+                        </div>
+
+
+
+
+                      <div class="form-group" style="margin-top:20px;">
+                        <a href="mars-section3" class="button">Submit</a>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </main>
+
+                {% endblock %}

@@ -1,0 +1,404 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Returns - Voluntary
+{% endblock %}
+
+{% block inside_header %}
+
+  <div class="header-proposition" style="float:right;padding-top:3px;">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+        <ul id="proposition-links">
+          <li style="color: white;">Jo Bloggs</li>
+
+
+            <li>
+              <a href="../sign-out">Sign out</a>
+            </li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+
+  .multiple-choice label {
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.multiple-choice label {
+    cursor: pointer;
+    padding: 8px 10px 9px 12px;
+    display: block;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.multiple-choice input {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    z-index: 1;
+    margin: 0;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.multiple-choice {
+    display: block;
+    float: none;
+    clear: left;
+    position: relative;
+    padding: 0 0 0 38px;
+    margin-bottom: 10px;
+}
+
+.multiple-choice [type=checkbox] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.multiple-choice [type=checkbox] + label::after {
+    content: "";
+    border: solid;
+    border-width: 0 0 5px 5px;
+    background: transparent;
+    width: 17px;
+    height: 7px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.multiple-choice input:checked + label::after {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+</style>
+
+<main id="content" role="main">
+
+  <p style="text-align:left;margin:0;">
+      <span style="left:0px; top:15px;position:relative;font-size:16px;"><a class="link-back" href="#">Back</a></span>
+  </p>
+
+  <form action="person-escorts" method="get" class="form">
+
+  <h1 class="form-title heading-large">
+    <!--<span style="font-size:24px; font-weight:normal; color: #6F777B">New return</span>
+    <br />-->
+    Person's details
+  </h1>
+
+  <br />
+
+  <!--<p class="panel panel-border-wide">As written on the returnee's travel document</p>-->
+
+  <!-- Home Office or Port reference -->
+    <!--<div class="form-group">
+      <label class="form-label-bold" for="hoRef">Home Office or port reference</label>
+      <input type="text" class="form-control" id="hoRef" name="hoRef">
+    </div>-->
+
+   <!-- Person ID -->
+    <div class="form-group">
+      <label class="form-label-bold" for="perID">Person ID</label>
+      <input type="text" class="form-control" id="perID" name="perID">
+    </div>
+
+    <!-- First and middle name -->
+    <div class="form-group">
+      <label class="form-label-bold" for="firstName">First and middle names</label>
+      <input type="text" class="form-control" id="firstName" name="firstName">
+    </div>
+    <!-- Last name -->
+    <div class="form-group">
+      <label class="form-label-bold" for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName">
+    </div>
+
+    <!-- Nationality -->
+    <div class="form-group">
+      <label class="form-label-bold" for="nationality">Country of nationality</label>
+      <input type="text" class="form-control" id="nationality" name="nationality">
+    </div>
+
+    <!-- Date of birth -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Date of birth</legend>
+        <div class="form-date">
+
+          <div class="form-group form-group-day">
+            <label for="dobDay">Day</label>
+            <input class="form-control" id="dobDay" name="dobDay" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="dobMonth">Month</label>
+            <input class="form-control" id="dobMonth" name="dobMonth" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="dobYear">Year</label>
+            <input class="form-control" id="dobYear" name="dobYear" type="number" pattern="[0-9]*" min="0" max="2016">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group inline">
+        <fieldset>
+          <label class="form-label-bold">Choose</label>
+
+          <label class="block-label" for="male">
+            <input id="male" type="radio" name="gender" value="Male">
+            <span class="text">Left</span>
+          </label>
+          <label class="block-label" for="female">
+            <input id="female" type="radio" name="gender" value="Female">
+            <span class="text">Right</span>
+          </label>
+        </fieldset>
+    </div>
+
+     <!--travel doc types -->
+    <div class="form-group">
+      <!--<label class="form-label-bold">Document</label>-->
+      <label class="form-label-bold">What option do you want?</label>
+
+        <!-- passport -->
+        <label class="block-label" for="travel_passport" data-target="doc_exp_date">
+        <input id="travel_passport" type="radio" name="Document_types" value="Passport">
+        <span class="text">Option 01</span>
+        </label>
+
+        <!-- emergency travel doc -->
+        <label class="block-label" for="travel_emergency_travel_doc" data-target="doc_exp_date">
+          <input id="travel_emergency_travel_doc" type="radio" name="Document_types" value="Emergency Travel Document">
+          <span class="text">Option 02</span>
+        </label>
+
+        <!-- id card -->
+        <label class="block-label" for="ID Card">
+        <input id="ID Card" type="radio" name="Document_types" value="Id Card" data-target="doc_exp_date">
+        <span class="text">Option 03</span>
+        </label>
+
+        <!-- eu letter -->
+        <label class="block-label" for="travel_eu_letter">
+          <input id="travel_eu_letter" type="radio" name="Document_types" value="EU Letter">
+          <span class="text">Option 04</span>
+        </label>
+
+        <!-- travel_common_provisional -->
+        <label class="block-label" for="travel_common_provisional">
+          <input id="travel_common_provisional" type="radio" name="Document_types" value="Common provisional travel documents">
+          <span class="text">Option 05</span>
+        </label>
+
+        <!-- chicago convention letter -->
+        <label class="block-label" for="travel_chicago_convention_letter">
+          <input id="travel_chicago_convention_letter" type="radio" name="Document_types" value="Chicago Convention Letter">
+          <span class="text">Option 06</span>
+        </label>
+
+        <!-- UN laissez passer -->
+        <label class="block-label" for="un_lp">
+          <input id="un_lp" type="radio" name="Document_types" value="UN laissez passer">
+          <span class="text">Option 07</span>
+        </label>
+
+        </fieldset>
+    </div>
+
+    <div class="" id="doc_exp_date" aria-hidden="true">
+      <div class="form-group">
+        <fieldset>
+        <legend class="form-label-bold">Expiry date (optional)</legend>
+
+        <div class="form-date">
+
+          <div class="form-group form-group-day">
+            <label for="expDay">Day</label>
+            <input class="form-control" id="expDay" name="expDay" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="expMonth">Month</label>
+            <input class="form-control" id="expMonth" name="expMonth" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="expYear">Year</label>
+            <input class="form-control" id="expYear" name="expYear" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+  </div>
+
+
+  <!-- assistance requirments -->
+
+      <fieldset style="margin-bottom:30px;">
+      <div class="form-group inline" style="margin-bottom:0px; width:60%">
+      <legend class="form-label-bold">Does they need any support?</legend>
+      <p class="form-hint" style="margin-bottom:0px;">For example ...</p>
+      <div class="form-group" style="margin-bottom:0px;">
+      <label for="assistance_info_yes" class="block-label selection-button-radio" data-target="more_info">
+          <input type="radio" name="assistance_info" value="yes" id="assistance_info_yes" aria-controls="assistance_info_specify" aria-expanded="false">
+            Yes
+          </label>
+
+
+        <label for="assistance_info_no" class="block-label selection-button-radio">
+          <input type="radio" name="assistance_info" value="no" id="assistance_info_no">
+            No
+          </label>
+
+        </div>
+          <div class="panel panel-border-narrow js-hidden" id="more_info" aria-hidden="true">
+        <!--<legend class="form-label-bold">Special assistance requirements?</legend>-->
+        <p class="" style="margin-bottom:0px;">Give details</p>
+        <div class="form-group">
+
+          <fieldset>
+
+              <textarea class="form-control" cols="30" rows="5" id="more_info"></textarea>
+
+            </fieldset>
+          </div>
+
+
+
+        </div>
+
+
+        </fieldset>
+
+
+      <!-- meal requirments -->
+    <div class="form-group inline">
+      <fieldset>
+
+        <legend class="form-label-bold">Does the person require something else special?</legend>
+
+           <label for="meal_info_yes" class="block-label selection-button-radio" data-target="meal_info_specify">
+            <input type="radio" name="meal_info" value="yes" id="meal_info_yes" aria-controls="meal_info_specify" aria-expanded="false">
+              Yes
+            </label>
+
+          <label for="meal_info_no" class="block-label selection-button-radio">
+            <input type="radio" name="meal_info" value="no" id="meal_info_no">
+              No
+            </label>
+
+
+
+            <div class="panel panel-border-narrow js-hidden" id="meal_info_specify" aria-hidden="true">
+
+
+
+              <p>Select all that apply</p>
+
+
+  <fieldset>
+
+    <div class="multiple-choice">
+      <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+      <label for="waste-type-1">Option 01</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+      <label for="waste-type-2">Option 02</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Option 03</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Option 04</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Option 05</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Option 06</label>
+    </div>
+    <div class="multiple-choice">
+
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural" >
+      <label for="waste-type-3" data-target="other-meal">Other
+      </label>
+    </div>
+
+      <div class="js-hidden" id="other-meal" aria-hidden="true">
+        <p class="" style="margin-bottom:0px;">Give details</p>
+        <div class="form-group">
+          <fieldset>
+              <input type="text" class="form-control" cols="30" rows="5" id="other-meal"></input>
+            </fieldset>
+          </div>
+        </div>
+
+
+  </fieldset>
+
+            </div>
+
+
+        </fieldset>
+      </div>
+
+    <div class="form-group">
+      <br>
+      <span style="float:left; margin-right: 30px;"><form action="confirm" method="get">
+               <input type="submit" class="button" value="Continue" style="">
+           </form></span>
+
+      <a href="#">Save and close</a>
+
+    </div>
+
+    <a href="confirm-deletion" style="color: #B10E1E">Delete</a>
+
+  </form>
+
+</main>
+
+{% endblock %}

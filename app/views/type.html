@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Space travel - select language
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li>Type of travel</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge" style="margin-bottom:30px;">
+        What type of travel are you undertaking?
+      </h1>
+
+      <p class="form-hint">These visa's do not cover scientific expaditions. If you intend that type of travel, please apply for a <a href="#">scientific space travel excemption</a>.</p>
+
+      <form action="short.html" method="get" class="form">
+        <fieldset>
+          <legend class="visually-hidden">Travel type</legend>
+
+          <!-- <div class="multiple-choice">
+            <input id="short" type="radio" name="type" value="Short">
+            <label for="short">Short term visa - up to 2 weeks</label>
+          </div> -->
+
+          <div class="multiple-choice">
+            <input id="long" type="radio" name="type" value="Long">
+            <label for="long">Standard space travel visa</label>
+          </div>
+
+          <div class="multiple-choice">
+            <input id="mars" type="radio" name="type" value="Mars">
+            <label for="mars">Mars Emigration Visa</label>
+          </div>
+
+        </fieldset>
+
+        <input style="margin-top:30px;" id="submit" type="submit" value="Next" class="button button-continue">
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

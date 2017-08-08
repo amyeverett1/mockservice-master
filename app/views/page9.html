@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <form action="/new-address" method="get" class="form">
+
+
+      <h1 class="heading-medium">Help us know what you want</h1>
+
+      <p>Provide at least one of these:</p>
+
+<br>
+
+<form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend class="visually-hidden">What kind of thing do you have?</legend>
+
+      <div class="multiple-choice" data-target="provide-passport-number">
+        <input id="passport-number" type="checkbox" name="check-passport-number" value="Yes">
+        <label for="passport-number">Option 01</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="provide-passport-number">
+        <label class="form-label" for="provide-passport-number"><span class="form-hint">Opt 01 number</span></label>
+        <input class="form-control" name="provide-passport-number" type="text" id="provide-passport-number">
+      </div>
+
+      <div class="multiple-choice" data-target="provide-brp-number">
+        <input id="brp-number" type="checkbox" name="check-brp-number" value="No">
+        <label for="brp-number">Opt 02</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="provide-brp-number">
+        <label class="form-label" for="provide-brp-number"><span class="form-hint"><a href=https://en.wikipedia.org/wiki/Information>Find out more</a>
+</span></label>
+        <input class="form-control" name="provide-brp-number" type="text" id="provide-brp-number">
+      </div>
+
+      <div class="multiple-choice" data-target="provide-arc-ref">
+        <input id="arc-ref" type="checkbox" name="check-arc-ref" value="No">
+        <label for="arc-ref">Opt 03</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="provide-arc-ref">
+        <label class="form-label" for="provide-arc-ref"><span class="form-hint">More information goes here</span></label>
+        <input class="form-control" name="provide-arc-ref" type="text" id="provide-arc-ref">
+      </div>
+
+      <div class="multiple-choice" data-target="provide-other-ref">
+        <input id="other-ref" type="checkbox" name="check-other-ref" value="No">
+        <label for="other-ref">I don't have any of these</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="provide-other-ref">
+        <label class="form-label" for="provide-arc-ref"></label>
+        <div class="multiple-choice" data-target="provide-passport-number">
+      <input id="passport-number" type="checkbox" name="check-passport-number" value="Yes">
+      <label for="passport-number">Hidden option 01</label>
+    </div>
+    <div class="multiple-choice" data-target="provide-passport-number">
+      <input id="passport-number" type="checkbox" name="check-passport-number" value="Yes">
+      <label for="passport-number">Hidden option 02</label>
+    </div>
+    <div class="multiple-choice" data-target="provide-passport-number">
+      <input id="passport-number" type="checkbox" name="check-passport-number" value="Yes">
+      <label for="passport-number">Hidden option 03</label>
+    </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+<a class="button" href="new-address-legal" type="submit">Continue</a>
+</form>
+
+<br>
+<div><a href="link">.</a></div>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

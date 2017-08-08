@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Mars visa - details
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large" style="margin-bottom:10px;">
+        Main applicants details
+      </h1>
+
+      <form>
+
+        <div class="form-group">
+          <!-- Name -->
+          <fieldset data-required data-error="Cannot be blank">
+            <label class="form-label-bold" for="full-name">Your full name</label>
+            <input type="text" class="form-control" id="name">
+          </fieldset>
+        </div>
+
+        <!-- Date of birth -->
+        <div class="form-group">
+          <fieldset data-required data-error="Cannot be blank">
+            <legend class="form-label-bold">DOB</legend>
+            <div class="form-date">
+
+              <input id="date" class="form-control" type="date">
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset data-required data-error="Cannot be blank">
+            <label class="form-label-bold" for="telephone">
+              Your telephone number
+            </label>
+            <input id="telephone" class="form-control" name="telephone" type="text">
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <fieldset data-required data-error="Cannot be blank">
+            <label class="form-label-bold" for="email">
+              Your email
+            </label>
+            <input id="email" class="form-control" name="email" type="text">
+          </fieldset>
+        </div>
+
+        <h3 class="heading-medium">Your address</h3>
+        <div class="form-group">
+          <label class="form-label-bold" for="full-name">Address line 1</label>
+          <input type="text" class="form-control" id="line-1">
+          <label class="form-label-bold" for="full-name">Address line 2</label>
+          <input type="text" class="form-control" id="line-2">
+          <label class="form-label-bold" for="full-name">Town</label>
+          <input type="text" class="form-control" id="town">
+          <label class="form-label-bold" for="full-name">Post code</label>
+          <input type="text" class="form-control" id="post-code">
+        </div>
+
+
+      </form>
+
+
+      <a class="button" href="mars-details3.html" role="button">Next</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

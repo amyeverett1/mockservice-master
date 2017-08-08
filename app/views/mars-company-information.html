@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Mars visa - details
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large" style="margin-bottom:10px;">
+        Company Information
+      </h1>
+
+
+        <h2 class="heading-medium">
+          What is the name of your company?
+        </h2>
+
+        <fieldset>
+
+          <div class="form-group form-group-compound">
+            <label class="form-label" for="address-line-1">Company name</label>
+            <input class="form-control" type="text" id="address-line-1">
+          </div>
+
+        </fieldset>
+
+
+
+        <div class="form-group">
+          <fieldset>
+
+
+            <h2 class="heading-medium">
+              What is the name of your company?
+            </h2>
+            <legend class="visually-hidden">What type of company is it?</legend>
+
+            <div class="multiple-choice">
+              <input id="company-type-sole-trader" name="company-type" type="radio" value="Sole trader">
+              <label for="company-type-sole-trader">Sole Trader</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="company-type-PLC" name="company-type" type="radio" value="PLC">
+              <label for="company-type-PLC">PLC</label>
+            </div>
+            <div class="multiple-choice" data-target="example-different-country">
+              <input id="company-type-other" name="company-type" type="radio" value="ltd">
+              <label for="company-type-other">Limited</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+              <label class="form-label" for="company-number">Limited company number</label>
+              <input class="form-control" type="text" id="company-number" name="company-number">
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <h2 class="heading-medium">
+          What is the address of your company?
+        </h2>
+
+        <fieldset>
+
+          <legend class="visually-hidden">
+            Your other address
+          </legend>
+
+          <div class="form-group form-group-compound">
+            <label class="form-label" for="address-line-1">Street</label>
+            <input class="form-control" type="text" id="address-line-1">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+            <input class="form-control" type="text" id="address-line-2">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="address-town">Town or City</label>
+            <input class="form-control form-control-1-4" type="text" id="address-town">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="address-postcode">Postcode</label>
+            <input class="form-control form-control-1-8" type="text" id="address-postcode">
+          </div>
+
+        </fieldset>
+
+      <a class="button" href="mars-contact-details.html" role="button">Next</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

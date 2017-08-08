@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Space travel - select language
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li>Select language</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge" style="margin-bottom:30px;">
+        Select language
+      </h1>
+
+      <p>You can read the questions in a different language, but your answers must be in English.</p>
+      <p>Please select your language:</p>
+
+      <form method="post">
+        <div class="form-group">
+          <fieldset data-required data-error="You must select a language">
+            <legend class="visually-hidden">How do you want to be contacted?</legend>
+
+            <div class="multiple-choice" data-target="english">
+              <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+              <label for="example-contact-by-email">English - please select your language</label>
+
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="english">
+              <label class="form-label" for="contact-email">Please specify British or American English</label>
+              <input class="form-control" name="contact-email" type="text" id="contact-email">
+            </div>
+            <div class="multiple-choice" data-target="contact-by-phone">
+              <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-phone">简体中⽂ - 请选择您的语⾔</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+              <label class="form-label" for="contact-phone">简体中请选⽂  语⾔择您的</label>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">हिन्दी - कृपया अपनी भाषा चुनें</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+              <label class="form-label" for="contact-text-message">हिन्दी अपनी भाषा - कृपया  चुनें</label>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Русский - пожалуйста, выберите ваш язык</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Türkçe - lütfen dilinizi seçin</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">ไทย - โปรด เลือกภาษาของคุณ</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Français - s'il vous plaît choisir votre langue</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">silahkan pilih bahasa Anda - Indonesia</label>
+            </div>
+
+            <div class="multiple-choice" >
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Português - Selecione seu idioma</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">සිංහල - කරුණාකර ඔබගේ භාෂාව තෝරන්න</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Việt - vui lòng chọn ngôn ngữ của bạn</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <a class="button" href="type.html" role="button">Next</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

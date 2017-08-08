@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Mars visa - details
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large" style="margin-bottom:10px;">
+        Contact details
+      </h1>
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <h2 class="heading-medium">
+              Your name
+            </h2>
+          <div class="form-group form-group-compound">
+            <label class="form-label" for="full-name">Full name</label>
+            <input class="form-control" type="text" id="full-name">
+          </div>
+
+        </fieldset>
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <h2 class="heading-medium">
+              How should we contact you?
+            </h2>
+
+            <div class="multiple-choice" data-target="SMS">
+              <input id="text-message" name="company-type" type="radio" value="SMS">
+              <label for="text-message">Text message</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="SMS">
+              <label class="form-label" for="phone-number">Phone number</label>
+              <input class="form-control" type="text" id="company-number" name="company-number">
+            </div>
+
+            <div class="multiple-choice" data-target="EMAIL">
+              <input id="company-type-email" name="company-type" type="radio" value="email">
+              <label for="company-type-email">Email</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="EMAIL">
+              <label class="form-label" for="company-number">Email address</label>
+              <input class="form-control" type="text" id="company-number" name="company-number">
+            </div>
+
+            <div class="multiple-choice" data-target="example-different-country">
+              <input id="company-type-other" name="company-type" type="radio" value="ltd">
+              <label for="company-type-other">Skype</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+              <label class="form-label" for="company-number">Skype number</label>
+              <input class="form-control" type="text" id="company-number" name="company-number">
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <h2 class="heading-medium">
+              What time is best to contact you?
+            </h2>
+            <legend class="visually-hidden">What time is best to contact you?</legend>
+
+            <div class="multiple-choice">
+              <input id="" name="" type="checkbox" value="">
+              <label for="">8am-12pm GMT</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="" name="" type="checkbox" value="">
+              <label for="">12pm-4pm GMT</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="" name="" type="checkbox" value="">
+              <label for="">4am-8pm GMT</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+      <a class="button" href="mars-convictions.html" role="button">Next</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

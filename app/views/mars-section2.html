@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Space travel - select language
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Visa application</a></li>
+      <li><a href="type.html">Type of travel</a></li>
+      <li>Mars Emigration Visa</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge" style="margin-bottom:30px;">
+        Mars Emigration Visa
+      </h1>
+
+      <ol class="task-list">
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">1. </span> Give us your details
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="mars-details.html" aria-describedby="eligibility-completed">
+                Your details
+              </a>
+              <strong class="task-completed" id="medical-information-completed">Completed</strong>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" aria-describedby="read-declaration-completed">
+                Other dependants
+              </a>
+              <strong class="task-completed" id="medical-information-completed">Completed</strong>
+            </li>
+          </ul>
+
+          <div class="form-group">
+            <details>
+              <summary><span class="summary">Help with starting</span></summary>
+              <div class="panel panel-border-narrow">
+                <p>
+                  If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
+                </p>
+                <p>
+                  If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
+                </p>
+              </div>
+            </details>
+          </div>
+
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">2. </span> Travel plans
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="mars-company-information" aria-describedby="company-information-completed">
+                Company information
+              </a>
+
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="#" aria-describedby="contact-details-completed">
+                Your contact details
+              </a>
+
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="#">
+                List convictions
+              </a>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="#">
+                Provide financial evidence
+              </a>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="#" aria-describedby="medical-information-completed">
+                Medical information
+              </a>
+
+            </li>
+          </ul>
+        </li>
+
+        <div class="form-group">
+          <details>
+            <summary><span class="summary">Help with preparing</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>
+                If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
+              </p>
+              <p>
+                If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">3. </span> Apply
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="#">
+                Submit and pay
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <div class="form-group">
+          <details>
+            <summary><span class="summary">Help with applying</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>
+                If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
+              </p>
+              <p>
+                If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
+              </p>
+            </div>
+          </details>
+        </div>
+
+      </ol>
+
+
+      <a class="button" href="mars-company-information" role="button">Next</a>
+
+    </div>
+    <div class="column-one-third">
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-small" id="subsection-title">Mars Emigration Visa information</h2>
+        <p style="font-size:16px;">Mars Emigration Visa's are valid indefinately.</p>
+        <p style="font-size:16px;">The cost of this visa is £103,349.00. You must repay any money you’re asked to. If you don’t repay money when asked you could be taken to court, and any benefits you receive may be reduced or money taken directly from your wages until your debt is repaid.</p>
+        <p style="font-size:16px;">Space travel is dangerous and you undertake it at your own personal risk.</p>
+        <p style="font-size:16px;">Your visa will be revoked if you or any named person on your visa is charged with a criminal offence. In these circumstances you will face extradition back to Earth.</p>
+      </aside>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
